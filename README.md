@@ -1,0 +1,2 @@
+# AndroidProjektas
+Riedlentininkams skirtas app
