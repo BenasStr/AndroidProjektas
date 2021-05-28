@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="edu.ktu.ride.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_trickCategoriesFragment"
+            app:destination="@id/trickCategoriesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trickCategoriesFragment"
+        android:name="edu.ktu.ride.fragments.TrickCategoriesFragment"
+        android:label="fragment_trick_categories"
+        tools:layout="@layout/fragment_trick_categories" >
+        <action
+            android:id="@+id/action_trickCategoriesFragment_to_flatGroundTricksFragment"
+            app:destination="@id/flatGroundTricksFragment" />
+        <action
+            android:id="@+id/action_trickCategoriesFragment_to_slidesAndGrindsFragment"
+            app:destination="@id/slidesAndGrindsFragment" />
+        <action
+            android:id="@+id/action_trickCategoriesFragment_to_rampTricksFragment"
+            app:destination="@id/rampTricksFragment" />
+        <action
+            android:id="@+id/action_trickCategoriesFragment_to_trickTutorialFragment"
+            app:destination="@id/trickTutorialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="edu.ktu.ride.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_trickTutorialFragment"
+            app:destination="@id/trickTutorialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flatGroundTricksFragment"
+        android:name="edu.ktu.ride.fragments.FlatGroundTricksFragment"
+        android:label="fragment_flat_ground_tricks"
+        tools:layout="@layout/fragment_flat_ground_tricks" >
+        <action
+            android:id="@+id/action_flatGroundTricksFragment_to_trickTutorialFragment"
+            app:destination="@id/trickTutorialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rampTricksFragment"
+        android:name="edu.ktu.ride.fragments.RampTricksFragment"
+        android:label="fragment_ramp_tricks"
+        tools:layout="@layout/fragment_ramp_tricks" />
+    <fragment
+        android:id="@+id/slidesAndGrindsFragment"
+        android:name="edu.ktu.ride.fragments.SlidesAndGrindsFragment"
+        android:label="fragment_slides_and_grinds"
+        tools:layout="@layout/fragment_slides_and_grinds" />
+    <fragment
+        android:id="@+id/trickTutorialFragment"
+        android:name="edu.ktu.ride.fragments.TrickTutorialFragment"
+        android:label="fragment_trick_tutorial"
+        tools:layout="@layout/fragment_trick_tutorial" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

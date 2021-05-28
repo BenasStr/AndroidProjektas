@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="edu.ktu.ride.viewmodels.TrickViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.TrickCategoriesFragment">
+
+        <Button
+            android:id="@+id/nav_category_flat_btn"
+            android:layout_width="379dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Flat ground tricks"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <Button
+            android:id="@+id/nav_category_ramp_btn"
+            android:layout_width="379dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Ramp tricks"
+            app:layout_constraintEnd_toEndOf="@+id/nav_category_sg_btn"
+            app:layout_constraintTop_toBottomOf="@+id/nav_category_sg_btn" />
+
+        <Button
+            android:id="@+id/nav_category_sg_btn"
+            android:layout_width="379dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Slides and grinds"
+            app:layout_constraintEnd_toEndOf="@+id/nav_category_flat_btn"
+            app:layout_constraintStart_toStartOf="@+id/nav_category_flat_btn"
+            app:layout_constraintTop_toBottomOf="@+id/nav_category_flat_btn" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Choose tricks category"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/learnNextRecyclerView" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Learn next:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/learnNextRecyclerView"
+            android:layout_width="369dp"
+            android:layout_height="181dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

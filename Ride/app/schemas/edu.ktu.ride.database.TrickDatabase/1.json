@@ -1,0 +1,82 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "5179b3f94ceb9014b375f7f12ad1bad0",
+    "entities": [
+      {
+        "tableName": "Trick",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`trickId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `requirements` TEXT NOT NULL, `tutorial_vid` TEXT NOT NULL, `description` TEXT NOT NULL, `learning_status` INTEGER NOT NULL, `categorie` TEXT NOT NULL, `position` TEXT NOT NULL, `done` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "trickId",
+            "columnName": "trickId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requirements",
+            "columnName": "requirements",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tutorial_vid",
+            "columnName": "tutorial_vid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "learning_status",
+            "columnName": "learning_status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "categorie",
+            "columnName": "categorie",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "done",
+            "columnName": "done",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "trickId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5179b3f94ceb9014b375f7f12ad1bad0')"
+    ]
+  }
+}
